@@ -21,7 +21,6 @@ class MusicLibraryController
       input.split(" ")
       self.send("#{input[0]}_#{input[1]}")
     end
-    call
   end
 
   def list_songs
