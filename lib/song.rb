@@ -42,7 +42,7 @@ class Song
     if find_by_name(name)
       find_by_name(name)
     else
-      Song.new(name)
+      Song.create(name)
     end
   end
 
