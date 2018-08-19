@@ -15,6 +15,7 @@ class Artist
     if !self.songs.include?(song)
       self.songs << song
     end
+    song
   end
 
   def self.create(name)
