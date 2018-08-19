@@ -16,11 +16,12 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
     input = gets.strip
-    input = input.split(" ")
-    if input != ["exit"]
+    possible = ["list songs", "list artists", "list genres", "list artist", "list genre", "play song", "exit"]
+    if possible.include?(input)
       self.send("#{input[0]}_#{input[1]}")
       call
     end
+    call
   end
 
   def list_songs
