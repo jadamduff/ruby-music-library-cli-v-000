@@ -19,6 +19,7 @@ class MusicLibraryController
     input = input.split(" ")
     if input != ["exit"]
       self.send("#{input[0]}_#{input[1]}")
+      call
     end
   end
 
