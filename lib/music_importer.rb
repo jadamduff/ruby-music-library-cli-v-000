@@ -9,5 +9,6 @@ class MusicImporter
   def files
     files = Dir.entries(self.path)
     files.delete_if {|file| file == "." || file == ".."}
+    files
   end
 end
