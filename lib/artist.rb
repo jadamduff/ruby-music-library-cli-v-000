@@ -27,6 +27,10 @@ class Artist
     @@all
   end
 
+  def genres
+    self.songs.select {|song| song.genre}.uniq
+  end
+
   def save
     self.class.all << self
   end
