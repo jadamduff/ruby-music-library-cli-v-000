@@ -18,4 +18,10 @@ class MusicLibraryController
     input = gets.strip
   end
 
+  def list_songs
+    songs = Songs.all.sort
+    songs.each_with_index do |val, index|
+      puts "#{index + 1}. #{val.artist} - #{val.name} - #{val.genre}"
+  end
+
 end
