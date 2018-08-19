@@ -16,7 +16,7 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    filename = filename.split(" - ")
+    filename = filename.split(/\b( - |.)\b/)
     artist = filename[0]
     artist = Artist.find_or_create_by_name(artist)
     song = filename[1]
