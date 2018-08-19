@@ -20,6 +20,8 @@ class MusicLibraryController
     if possible.include?(input)
       input.split(" ")
       self.send("#{input[0]}_#{input[1]}")
+    elsif input != "exit"
+      call
     end
   end
 
