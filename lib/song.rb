@@ -2,8 +2,8 @@ class Song
   attr_accessor :name, :artist
   @@all = []
 
-  def initialize(attributes)
-    attributes.each {|key, val| self.send(("#{key}="), val)}
+  def initialize(name, artist=)
+    @name = name
     self.save
     self
   end
