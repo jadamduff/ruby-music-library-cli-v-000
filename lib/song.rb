@@ -13,6 +13,12 @@ class Song
     song
   end
 
+  def artist=(artist)
+    if artist.class = object
+      self.artist.add_song(self)
+    end
+  end
+
   def self.all
     @@all
   end
