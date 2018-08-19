@@ -16,7 +16,7 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
     input = gets.strip
-    input.split!(" ")
+    input = input.split(" ")
     if input != 'exit'
       self.send("#{input[0]}_#{input[1]}")
     end
