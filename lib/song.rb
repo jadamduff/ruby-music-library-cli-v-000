@@ -19,6 +19,8 @@ class Song
     filename = filename.split(/\b( - |.)\b/)
     artist = filename[0]
     artist = Artist.find_or_create_by_name(artist)
+    genre = filename[2]
+    genre = Genre.find_or_create_by_name(genre)
     song = filename[1]
     Song.new(song, artist)
   end
