@@ -17,6 +17,14 @@ class Genre
     @@all
   end
 
+  def artists
+    artists = []
+    self.songs.each do |song|
+      artists << song.artist
+    end
+    artists.uniq
+  end
+
   def save
     self.class.all << self
   end
