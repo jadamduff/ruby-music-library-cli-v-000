@@ -2,14 +2,14 @@ class Artist
   attr_accessor :name, :songs
   @@all = []
 
-  def initialize(name)
+  def initialize(name)any
     @name = name
     self.save
     @songs = []
   end
 
   def add_song(song)
-    if !song.artist == self
+    if song.artist != self
       song.artist = self
     end
     if !self.songs.include?(song)
