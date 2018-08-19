@@ -15,6 +15,13 @@ class Song
     song
   end
 
+  def self.new_from_filename(filename)
+    filename = filename.split(" - ")
+    artist = filename[0]
+    song = filename[1]
+    Song.new(song, artist)
+  end
+
   def artist=(artist)
     @artist = artist
     if self.artist != nil
