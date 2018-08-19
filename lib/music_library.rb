@@ -17,7 +17,7 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = gets.strip
     possible = ["list songs", "list artists", "list genres", "list artist", "list genre", "play song", "exit"]
-    if possible.include?(input)
+    if possible.include?(input) && input != "exit"
       input.split(" ")
       self.send("#{input[0]}_#{input[1]}")
       call
