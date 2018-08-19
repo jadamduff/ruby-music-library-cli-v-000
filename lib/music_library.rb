@@ -23,6 +23,7 @@ class MusicLibraryController
     songs.each_with_index do |val, index|
       puts "#{index + 1}. #{val.artist} - #{val.name} - #{val.genre}"
     end
+    call
   end
 
 end
