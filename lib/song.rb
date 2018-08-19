@@ -14,7 +14,7 @@ class Song
     song
   end
 
-  def artist=(artist)
+  def artist=(artist_obj)
     if artist_obj.is_a?(Artist)
       self.artist.add_song(self)
     end
