@@ -18,6 +18,7 @@ class Song
     if self.artist.is_a?(Artist)
       self.artist.add_song(self)
     end
+    @artist = artist
   end
 
   def self.all
